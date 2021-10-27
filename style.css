@@ -1,0 +1,341 @@
+/* reset css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Additions Below */
+:root,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* mobile */
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 16.4rem;
+  display: grid;
+  place-items: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 3rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "card__daniel card__daniel card__jonathan card__kira"
+    "card__jeanette card__patrick card__patrick card__kira";
+}
+
+.card__daniel,
+.card__jonathan,
+.card__patrick {
+  color: hsl(0, 0%, 100%);
+}
+
+.card__daniel {
+  grid-area: card__daniel;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 35rem;
+}
+
+.card__jonathan {
+  grid-area: card__jonathan;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card__jeanette {
+  grid-area: card__jeanette;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card__patrick {
+  grid-area: card__patrick;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card__kira {
+  grid-area: card__kira;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.testimonials-grid__card {
+  border-radius: 1rem;
+  padding: 2.5rem 3.5rem 0rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 22px 31px 22px -14px rgba(123, 93, 93, 0.22);
+}
+
+.testimonials-grid__header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonials-grid__header img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 3.4rem;
+}
+
+.testimonials-grid__header img.header__thumbnail--img {
+  border: 2px solid rgb(149, 119, 197);
+}
+
+.testimonials-grid__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header__info h5.info__heading,
+.header__info h5.info__status {
+  font-weight: 400;
+}
+
+.header__info h5.info__heading {
+  font-size: 1.35rem;
+  margin-bottom: 0.3rem;
+}
+
+.header__info h5.info__status {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  opacity: 0.35;
+}
+
+.header__info h5.info__status--dark {
+  color: hsl(217, 19%, 35%);
+  opacity: 0.5;
+}
+
+.testimonials-grid__content p.content__heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.testimonials-grid__content p.content__description {
+  opacity: 0.6;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card__jeanette p.content__heading,
+.card__patrick p.content__heading,
+.card__kira p.content__heading {
+  margin-bottom: 1rem;
+}
+
+.card__daniel p.content__description,
+.card__jonathan p.content__description,
+.card__kira p.content__description {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: unset;
+    padding: 7rem 2.4rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 2.4rem;
+    grid-template-areas:
+      "card__daniel"
+      "card__jonathan"
+      "card__jeanette"
+      "card__patrick"
+      "card__kira";
+  }
+
+  .testimonials-grid__card {
+    padding-bottom: 1rem;
+  }
+
+  .card__daniel {
+    grid-area: card__daniel;
+    background-position-x: 90%;
+  }
+
+  .card__jonathan {
+    grid-area: card__jonathan;
+  }
+
+  .card__jeanette {
+    grid-area: card__jeanette;
+  }
+
+  .card__patrick {
+    grid-area: card__patrick;
+  }
+
+  .card__kira {
+    grid-area: card__kira;
+  }
+
+  .card__jeanette p.content__heading, .card__kira p.content__heading {
+    margin-bottom: 0;
+  }
+  
+  .card__jeanette p.content__description,
+  .card__patrick p.content__description {
+    margin-bottom: 1.5rem;
+  }
+}
